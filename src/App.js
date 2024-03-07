@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import './App.css';
 import Child from './component/Child';
 
@@ -16,9 +16,9 @@ function App() {
     };
   }, []);
 
-  const tellMe = () => {
+  const tellMe = useCallback(() => {
     console.log('길동아 그거해');
-  };
+  }, []);
 
   console.log('부모 컴포넌트 렌더링!');
 
