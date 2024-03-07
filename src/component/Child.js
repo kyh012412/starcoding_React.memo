@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Child = () => {
+const Child = ({ name, age }) => {
+  console.log('자녀 컴포넌트 렌더링!');
   return (
     <div
       style={{
@@ -10,8 +11,8 @@ const Child = () => {
       }}
     >
       <h1>자녀</h1>
-      <p>name: 홍길동</p>
-      <p>age: 5살</p>
+      <p>name: {name}</p>
+      <p>age: {age}살</p>
     </div>
   );
 };
