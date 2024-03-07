@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-const Child = ({ name, age }) => {
+const Child = ({ name }) => {
   console.log('자녀 컴포넌트 렌더링!');
   return (
     <div
@@ -11,8 +11,8 @@ const Child = ({ name, age }) => {
       }}
     >
       <h1>자녀</h1>
-      <p>name: {name}</p>
-      <p>age: {age}살</p>
+      <p>lastName: {name.lastName}</p>
+      <p>firstName: {name.firstName}</p>
     </div>
   );
 };
