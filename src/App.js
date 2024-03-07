@@ -16,6 +16,10 @@ function App() {
     };
   }, []);
 
+  const tellMe = () => {
+    console.log('길동아 그거해');
+  };
+
   console.log('부모 컴포넌트 렌더링!');
 
   return (
@@ -29,7 +33,7 @@ function App() {
       <h1>부모</h1>
       <p>age: {parentAge}</p>
       <button onClick={incrementParentAge}>부모 나이 증가</button>
-      <Child name={name} />
+      <Child name={name} tellMe={tellMe} />
     </div>
   );
 }
