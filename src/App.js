@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import './App.css';
 import Child from './component/Child';
 
@@ -9,10 +9,12 @@ function App() {
     setParentAge(parentAge + 1);
   };
 
-  const name = {
-    lastName: '홍',
-    firstName: '길동',
-  };
+  const name = useMemo(() => {
+    return {
+      lastName: '홍',
+      firstName: '길동',
+    };
+  }, []);
 
   console.log('부모 컴포넌트 렌더링!');
 
